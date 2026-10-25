@@ -8,3 +8,33 @@
 .auth-card h1{margin:0;font-size:30px;letter-spacing:-.8px}.auth-card p{margin:0;color:#6c7486;line-height:1.6}.auth-card label{display:flex;flex-direction:column;gap:7px;font-size:13px;font-weight:650;color:#40495b}.auth-card input{width:100%;border:1px solid #dfe3ec;border-radius:10px;padding:12px 13px;background:#fff;color:#20283a;font:inherit;outline:none}.auth-card input:focus{border-color:#4b9d78;box-shadow:0 0 0 3px #4b9d7818}.auth-submit{width:100%;justify-content:center;min-height:46px}.auth-switch{align-self:center}.auth-card small{color:#7a8292;line-height:1.5}.directory-toggle{display:flex;align-items:flex-start;gap:10px;padding:12px 0;font-size:14px;color:#414a5b}.directory-toggle input{margin-top:3px;accent-color:#26865e}.directory-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:14px}.directory-person{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #eceef3;border-radius:12px}.directory-person>div:last-child{display:flex;flex-direction:column;gap:3px}.directory-person small{color:#737c8e}.day-tabs button.active{background:#e3f4ec;color:#237a54;border-color:#bde6d1;font-weight:700}
 @media(max-width:600px){.auth-card{padding:24px;border-radius:18px}.auth-card h1{font-size:26px}}
 .attendance-summary-table .table-row{grid-template-columns:1.5fr .55fr .55fr 1.05fr .65fr .9fr .9fr;min-width:840px}
+
+/* Attendance Buddy theme controls and dark mode */
+:root[data-theme="dark"]{color-scheme:dark;--ink:#edf1f7;--muted:#a2adbd;--line:#303a49;--white:#1b2430;background:#111821;color:#edf1f7}
+:root[data-theme="dark"] body{background:#111821;color:#edf1f7}
+:root[data-theme="dark"] .sidebar,:root[data-theme="dark"] .topbar,:root[data-theme="dark"] .table-card,:root[data-theme="dark"] .settings-card,:root[data-theme="dark"] .class-card,:root[data-theme="dark"] .stat-card,:root[data-theme="dark"] .mode-hint,:root[data-theme="dark"] .empty-state,:root[data-theme="dark"] .add-form,:root[data-theme="dark"] .mode-option,:root[data-theme="dark"] .auth-card{background:#1b2430;border-color:#303a49;color:#edf1f7}
+:root[data-theme="dark"] .main,:root[data-theme="dark"] .content{color:#edf1f7}
+:root[data-theme="dark"] .brand b,:root[data-theme="dark"] .welcome-row h1,:root[data-theme="dark"] .page-title h1,:root[data-theme="dark"] .section-heading h2,:root[data-theme="dark"] .class-details b,:root[data-theme="dark"] .table-row b,:root[data-theme="dark"] .settings-card-title h3,:root[data-theme="dark"] .mode-option b,:root[data-theme="dark"] .privacy-card b,:root[data-theme="dark"] .breadcrumb b{color:#edf1f7}
+:root[data-theme="dark"] .nav-item{color:#aab4c3}
+:root[data-theme="dark"] .nav-item:hover,:root[data-theme="dark"] .mode-option-icon,:root[data-theme="dark"] .college-pill,:root[data-theme="dark"] .privacy-card,:root[data-theme="dark"] .table-head,:root[data-theme="dark"] .threshold-tag{background:#232e3c;color:#c0cad8;border-color:#303a49}
+:root[data-theme="dark"] .nav-item.active,:root[data-theme="dark"] .mode-option.selected{background:#173d30;color:#9fe2bf;border-color:#316a50}
+:root[data-theme="dark"] input,:root[data-theme="dark"] select,:root[data-theme="dark"] .add-form input,:root[data-theme="dark"] .add-form select,:root[data-theme="dark"] .form-grid input,:root[data-theme="dark"] .form-grid select,:root[data-theme="dark"] .auth-card input,:root[data-theme="dark"] .date-controls input{background:#111821;color:#edf1f7;border-color:#3a4657}
+:root[data-theme="dark"] .icon-btn,:root[data-theme="dark"] .btn-secondary,:root[data-theme="dark"] .attendance-toggle{background:#232e3c;color:#dbe3ee;border-color:#3a4657}
+:root[data-theme="dark"] .table-row,:root[data-theme="dark"] .table-header,:root[data-theme="dark"] .profile-mini{border-color:#303a49}
+:root[data-theme="dark"] .table-row{color:#c0cad8}
+:root[data-theme="dark"] .auth-screen{background:radial-gradient(circle at 15% 10%,#173d30 0,transparent 35%),radial-gradient(circle at 90% 80%,#272345 0,transparent 35%),#111821}
+:root[data-theme="dark"] .auth-card p,:root[data-theme="dark"] .auth-card small,:root[data-theme="dark"] .settings-card-title p,:root[data-theme="dark"] .small-note,:root[data-theme="dark"] .class-details span,:root[data-theme="dark"] .welcome-row p,:root[data-theme="dark"] .page-title p{color:#a2adbd}
+.theme-quick{border:1px solid var(--line);border-radius:7px;background:var(--white);color:var(--ink);padding:7px 8px;font-size:11px;max-width:105px}
+.timetable-toolbar-actions,.timetable-row-actions{display:flex;align-items:center;gap:7px}
+.timetable-row-actions .icon-btn{display:inline-grid}
+.timetable-toolbar-actions{gap:8px}
+.add-form{align-items:end}
+.add-form label{min-width:130px}
+@media(max-width:760px){.timetable-toolbar{align-items:stretch;flex-direction:column}.timetable-toolbar-actions{width:100%}.timetable-toolbar-actions .btn{flex:1;padding:9px 8px;font-size:10px}.theme-quick{max-width:82px;padding:6px;font-size:10px}.top-actions{gap:8px}.saved-label{font-size:10px}.add-form label{min-width:0}}
+
+:root[data-theme="dark"] .warning-callout,:root[data-theme="dark"] .info-callout,:root[data-theme="dark"] .holiday-banner,:root[data-theme="dark"] .daily-footer,:root[data-theme="dark"] .footer,:root[data-theme="dark"] .table-header,:root[data-theme="dark"] .date-controls{background:#1b2430;border-color:#303a49;color:#edf1f7}
+:root[data-theme="dark"] .form-grid label,:root[data-theme="dark"] .add-form label{color:#c0cad8}
+:root[data-theme="dark"] .day-tabs button{background:#1b2430;color:#c0cad8;border-color:#303a49}
+:root[data-theme="dark"] .day-tabs button.active,:root[data-theme="dark"] .day-tabs button:hover{background:#173d30;color:#9fe2bf;border-color:#316a50}
+:root[data-theme="dark"] .table-header p,:root[data-theme="dark"] .footer,:root[data-theme="dark"] .daily-footer span{color:#a2adbd}
+:root[data-theme="dark"] .date-controls input{background:#111821;color:#edf1f7;border-color:#3a4657}
