@@ -38,3 +38,17 @@
 :root[data-theme="dark"] .day-tabs button.active,:root[data-theme="dark"] .day-tabs button:hover{background:#173d30;color:#9fe2bf;border-color:#316a50}
 :root[data-theme="dark"] .table-header p,:root[data-theme="dark"] .footer,:root[data-theme="dark"] .daily-footer span{color:#a2adbd}
 :root[data-theme="dark"] .date-controls input{background:#111821;color:#edf1f7;border-color:#3a4657}
+
+/* Clear two-way attendance editing (including backdated corrections). */
+.attendance-actions{display:flex;align-items:center;gap:5px;flex-shrink:0}
+.attendance-choice{display:inline-flex;align-items:center;justify-content:center;gap:5px;border:1px solid var(--line);border-radius:7px;padding:8px 9px;background:var(--white);color:var(--muted);font-size:10px;font-weight:700;white-space:nowrap;transition:background .15s,border-color .15s,color .15s}
+.attendance-choice.present-choice:hover,.attendance-choice.present-choice.selected{background:#e8f6ee;border-color:#b9e2ca;color:#237c55}
+.attendance-choice.absent-choice:hover,.attendance-choice.absent-choice.selected{background:#fff0ef;border-color:#efc8c5;color:#b64e4c}
+.attendance-choice.selected{box-shadow:inset 0 0 0 1px currentColor}
+.attendance-reset{width:30px;height:30px;display:inline-grid;place-items:center;border:1px solid var(--line);border-radius:7px;background:var(--white);color:var(--muted)}
+.attendance-reset:hover{background:#f1f3f7;color:var(--ink)}
+@media(max-width:760px){.attendance-actions{width:100%;justify-content:flex-end;margin-left:88px}.attendance-choice{flex:1;max-width:120px}.attendance-reset{flex:0 0 30px}}
+@media(max-width:380px){.attendance-actions{margin-left:0}.attendance-choice{padding:8px 6px;font-size:9px}}
+:root[data-theme="dark"] .attendance-choice,:root[data-theme="dark"] .attendance-reset{background:#232e3c;border-color:#3a4657;color:#dbe3ee}
+:root[data-theme="dark"] .attendance-choice.present-choice:hover,:root[data-theme="dark"] .attendance-choice.present-choice.selected{background:#173d30;border-color:#28684d;color:#a9e5c8}
+:root[data-theme="dark"] .attendance-choice.absent-choice:hover,:root[data-theme="dark"] .attendance-choice.absent-choice.selected{background:#482a2d;border-color:#754144;color:#ffb6b0}
