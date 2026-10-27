@@ -66,7 +66,21 @@ function normalizeData(raw:any):Data{
  return d;
 }
 function load():Data{try{const d=localStorage.getItem('attendance-buddy-v1');if(d)return normalizeData(JSON.parse(d));}catch{}return defaultData;}
-function greeting(){const h=new Date().getHours();return h<12?'Good morning':h<17?'Good afternoon':h<21?'Good evening':'Hey';}
+
+function greeting() {
+  const h = new Date().getHours();
+  
+  if (h >= 5 && h < 12) {
+    return 'Good morning';      // 5:00 AM to 11:59 AM
+  } else if (h >= 12 && h < 16) {
+    return 'Good afternoon';    // 12:00 PM to 3:59 PM
+  } else if (h >= 16 && h < 21) {
+    return 'Good evening';      // 4:00 PM to 8:59 PM
+  } else {
+    return 'Hey';               // 9:00 PM to 4:59 AM
+  }
+}
+
 function prettyDate(s:string){return new Date(s+'T12:00:00').toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'});}
 function App(){const [data,setData]=useState<Data>(load);const [editingSessionId,setEditingSessionId]=useState<string|null>(null);const [newEndTime,setNewEndTime]=useState('10:00');const [page,setPage]=useState('Overview');const [showAdd,setShowAdd]=useState(false);const [newSubject,setNewSubject]=useState('');const [newCategory,setNewCategory]=useState('Theory');const [newDay,setNewDay]=useState('1');const [selectedTimetableDay,setSelectedTimetableDay]=useState('1');const [newTime,setNewTime]=useState('09:00');const [mobileMenu,setMobileMenu]=useState(false);const [notice,setNotice]=useState('');const [authUser,setAuthUser]=useState<User|null>(null);const [authReady,setAuthReady]=useState(!cloudConfigured);const [cloudReady,setCloudReady]=useState(!cloudConfigured);const [authMode,setAuthMode]=useState<'login'|'signup'>('signup');const [authEmail,setAuthEmail]=useState('');const [authPassword,setAuthPassword]=useState('');const [authBusy,setAuthBusy]=useState(false);const [authError,setAuthError]=useState('');const [directory,setDirectory]=useState<Array<{id:string;display_name:string;course:string;academic_year:string}>>([]);const [directoryBusy,setDirectoryBusy]=useState(false);
 useEffect(()=>{const applyTheme=()=>{const dark=data.theme==='dark'||(data.theme==='system'&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=dark?'dark':'light';document.documentElement.style.colorScheme=dark?'dark':'light';};applyTheme();if(data.theme!=='system')return;const media=window.matchMedia('(prefers-color-scheme: dark)');media.addEventListener('change',applyTheme);return()=>media.removeEventListener('change',applyTheme);},[data.theme]);
