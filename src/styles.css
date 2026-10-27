@@ -52,3 +52,17 @@
 :root[data-theme="dark"] .attendance-choice,:root[data-theme="dark"] .attendance-reset{background:#232e3c;border-color:#3a4657;color:#dbe3ee}
 :root[data-theme="dark"] .attendance-choice.present-choice:hover,:root[data-theme="dark"] .attendance-choice.present-choice.selected{background:#173d30;border-color:#28684d;color:#a9e5c8}
 :root[data-theme="dark"] .attendance-choice.absent-choice:hover,:root[data-theme="dark"] .attendance-choice.absent-choice.selected{background:#482a2d;border-color:#754144;color:#ffb6b0}
+
+/* Keep every subject visible in the Overview breakdown, including on phones. */
+@media(max-width:600px){
+  .stats-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .stat-card{min-width:0;padding:12px 10px}
+  .stat-top{align-items:flex-start;flex-wrap:wrap;font-size:11px}
+  .threshold-tag{font-size:9px}
+  .stat-number{font-size:21px;margin:12px 0 10px}
+  .stat-bottom{flex-wrap:wrap;font-size:9px;line-height:1.4}
+  .auth-notice{overflow-wrap:anywhere}
+}
+@media(max-width:350px){
+  .stats-grid{grid-template-columns:minmax(0,1fr)}
+}
