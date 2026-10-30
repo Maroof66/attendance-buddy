@@ -14,11 +14,11 @@ type Theme='system'|'light'|'dark';
 type Data={batchLabel:string; mode:Mode; theme:Theme; thresholds:Thresholds; endDate:string; startDate:string; selectedDate:string; holidays:Record<string,string>; records:Record<string,Record<string,Status>>; timetable:Session[]; profile:{name:string;course:string;year:string;directoryVisible:boolean};notificationsEnabled:boolean};
 const defaultThresholds:Thresholds={Theory:75,Practical:80,Clinical:80,Other:75};
 const initialSessions:Session[]=[
-{id:'v2-m1',day:1,time:'09:00',endTime:'11:00',subject:'Clinical Pathology',category:'Practical',threshold:80},
+{id:'v2-m1',day:1,time:'09:00',endTime:'11:00',subject:'Histo-Pathology Practical',category:'Practical',threshold:80},
 {id:'v2-m2',day:1,time:'11:00',endTime:'12:00',subject:'Pathology',category:'Theory',threshold:75},
 {id:'v2-m3',day:1,time:'12:00',endTime:'13:00',subject:'Pharmacology',category:'Theory',threshold:75},
 {id:'v2-m4',day:1,time:'15:00',endTime:'17:00',subject:'Clinical Posting',category:'Clinical',threshold:80},
-{id:'v2-t1',day:2,time:'09:00',endTime:'11:00',subject:'Clinical Pathology',category:'Practical',threshold:80},
+{id:'v2-t1',day:2,time:'09:00',endTime:'11:00',subject:'Microbiology Practical',category:'Practical',threshold:80},
 {id:'v2-t2',day:2,time:'11:00',endTime:'12:00',subject:'Pharmacology',category:'Theory',threshold:75},
 {id:'v2-t3',day:2,time:'12:00',endTime:'13:00',subject:'Pathology',category:'Theory',threshold:75},
 {id:'v2-t4',day:2,time:'15:00',endTime:'17:00',subject:'Clinical Posting',category:'Clinical',threshold:80},
@@ -27,11 +27,11 @@ const initialSessions:Session[]=[
 {id:'v2-w3',day:3,time:'11:00',endTime:'12:00',subject:'Pathology',category:'Theory',threshold:75},
 {id:'v2-w4',day:3,time:'12:00',endTime:'13:00',subject:'Microbiology',category:'Theory',threshold:75},
 {id:'v2-w5',day:3,time:'15:00',endTime:'17:00',subject:'Clinical Posting',category:'Clinical',threshold:80},
-{id:'v2-th1',day:4,time:'09:00',endTime:'11:00',subject:'Hematology',category:'Practical',threshold:80},
+{id:'v2-th1',day:4,time:'09:00',endTime:'11:00',subject:'Clino-Pathology Practical',category:'Practical',threshold:80},
 {id:'v2-th2',day:4,time:'11:00',endTime:'12:00',subject:'Community Medicine',category:'Theory',threshold:75},
 {id:'v2-th3',day:4,time:'12:00',endTime:'13:00',subject:'Microbiology',category:'Theory',threshold:75},
 {id:'v2-th4',day:4,time:'15:00',endTime:'17:00',subject:'Clinical Posting',category:'Clinical',threshold:80},
-{id:'v2-f1',day:5,time:'09:00',endTime:'11:00',subject:'Hematology',category:'Practical',threshold:80},
+{id:'v2-f1',day:5,time:'09:00',endTime:'11:00',subject:'Pharmacology Practical',category:'Practical',threshold:80},
 {id:'v2-f2',day:5,time:'11:00',endTime:'12:00',subject:'Microbiology',category:'Theory',threshold:75},
 {id:'v2-f3',day:5,time:'12:00',endTime:'13:00',subject:'Pharmacology',category:'Theory',threshold:75},
 {id:'v2-f4',day:5,time:'15:00',endTime:'17:00',subject:'Clinical Posting',category:'Clinical',threshold:80},
